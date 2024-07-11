@@ -54,35 +54,33 @@ Setup Instructions
 
     Clone the repository:
 
-    bash
 
 git clone https://github.com/yourusername/your-repo-name.git
 cd your-repo-name
 
 ### Create and activate a virtual environment (optional but recommended):
 
-bash
 
 python -m venv env
 source env/bin/activate  # On Windows use `env\Scripts\activate`
 
 ### Install the dependencies:
 
-bash
-
 pip install -r requirements.txt
 
 ### Create the database and apply migrations:
 
-bash
 
 python manage.py migrate
 
 ### Run the development server:
 
-bash
-
     python manage.py runserver
+    
+### Create a superuser:
+
+
+python manage.py createsuperuser
 
 ### Usage
 
@@ -94,32 +92,10 @@ bash
         Go to http://127.0.0.1:8000/booking/new/ to create a new booking.
         Fill in the form and submit to save the booking to the database.
 
-## File Structure
-myproject/
-├── myapp/
-│ ├── migrations/
-│ ├── templates/
-│ │ └── create_booking.html
-│ ├── init.py
-│ ├── admin.py
-│ ├── apps.py
-│ ├── forms.py
-│ ├── models.py
-│ ├── tests.py
-│ └── views.py
-├── myproject/
-│ ├── init.py
-│ ├── asgi.py
-│ ├── settings.py
-│ ├── urls.py
-│ └── wsgi.py
-├── manage.py
-└── requirements.txt
 
 
 ### You can create some example categories and bookings using the Django shell:
 
-python
 
 from myapp.models import Category, Booking
 from django.utils import timezone
@@ -139,7 +115,7 @@ Booking.objects.create(
 ### Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request.
-License
+### License
 
 This project is licensed under the MIT License.
 Acknowledgements
