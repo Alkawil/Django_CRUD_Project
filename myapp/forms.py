@@ -8,3 +8,4 @@ class BookingForm(forms.ModelForm):
         widgets = {
             'reservation_time': forms.DateTimeInput(attrs={'type': 'datetime-local'}),  # HTML5 datetime picker
         }
+    
