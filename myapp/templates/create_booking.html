@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Booking</title>
+</head>
+<body>
+    <form action = "" method = "post", style="background-color:lightblue;">
+    <h2 style="color:red;">Create a Booking</h2>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

@@ -12,7 +12,7 @@ class Booking(models.Model):
     guest_count = models.IntegerField()
     reservation_time = models.DateTimeField()
     comments = models.CharField(max_length=1000)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE, default=1)  # Replace '1' with the ID of your default category
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, default=1)
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
