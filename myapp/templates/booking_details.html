@@ -12,7 +12,8 @@
         <p><b>Comments:</b> {{booking.comments}}</p>
         <p><b>Category: </b>{{booking.category}}</p>
         <a href="{% url 'booking_list' %}">Back to list</a><br><br>
-        <a href="{% url 'booking_update' booking.pk %}">Update</a>
+        <a href="{% url 'booking_update' booking.pk %}">Update</a><br><br>
+        <a href="{% url 'booking_delete' booking.pk %}">Delete</a>
 
 
     </body>

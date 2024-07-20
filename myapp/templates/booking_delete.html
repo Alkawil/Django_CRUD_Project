@@ -1,0 +1,19 @@
+<html>
+
+<head>
+    <title>Delete Booking</title>
+
+</head>
+
+<body>
+    <h2>Are you sure you want to delete this booking?</h3>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Confirm deletion</button>
+    </form>
+    <a href="{% url 'booking_list' %}">Back to list</a>
+
+
+</body>
+
+</html>
