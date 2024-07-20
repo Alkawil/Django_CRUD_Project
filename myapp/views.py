@@ -5,6 +5,7 @@ from .models import Booking, Category
 # Create your views here.
 from django.http import HttpResponse
 
+# create
 
 def create_booking(request):
     if request.method == 'POST':
@@ -19,3 +20,12 @@ def create_booking(request):
 
 def booking_success(request):
     return HttpResponse("Booking created successfully!")
+
+#Read
+def booking_list(request):
+    bookings = Booking.objects.all()
+    return render(request,'booking_list.html',{'bookings': bookings})
+
+def booking_details(request,pk):
+    booking = get_object_or_404(Booking,pk=pk)
+    return render(request,'booking_details.html',{'booking':booking})

@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Booking Details</title>
+
+    </head>
+    <body>
+        <h2>Booking Details</h2>
+        <p><b>First Name:</b> {{booking.first_name}}</p>
+        <p><b>Last Name:</b> {{booking.last_name}}</p>
+        <p><b>Guest Count: </b>{{booking.guest_count}}</p>
+        <p><b>Reservation Time:</b> {{booking.reservation_time}}</p>
+        <p><b>Comments:</b> {{booking.comments}}</p>
+        <p><b>Category: </b>{{booking.category}}</p>
+        <a href="{% url 'booking_list' %}">Back to list</a>
+
+    </body>
+</html>

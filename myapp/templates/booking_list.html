@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>Booking List</title>
+
+    </head>
+    <body><h2>List of all Bookings</h2>
+        <ul>
+            {% for booking in bookings %}
+            <li><a href="{% url 'booking_details' booking.pk %}">{{ booking.first_name }} {{ booking.last_name }}</a></li>
+            {% endfor %}
+        </ul>
+
+    </body>
+</html>
